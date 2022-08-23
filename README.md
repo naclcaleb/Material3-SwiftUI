@@ -81,4 +81,11 @@ MaterialTextField(text: $text, placeholder: "Email")
 ```
 
 ## Theme
-All colors, fonts, font sizes, corner radius size settings, icons, etc. are defined under the `MaterialTheme` class in `MaterialTheme.swift`. This can be generated based on a CSS theme exported from the [Material 3 Theme Builder](https://m3.material.io/theme-builder#/dynamic).
+All colors, fonts, font sizes, corner radius size settings, icons, etc. are defined under the `MaterialTheme` class in `MaterialTheme.swift`. 
+
+In order to generate your colorsets, use the [Material 3 Theme Builder](https://m3.material.io/theme-builder#/dynamic) to create a theme, then export it with the `Material Tokens (DSP)` option. Unzip the file, and place the `data/tokens.json` file in the same folder as the `generate_material_theme.py` script from this repo. Run the script using:
+```
+python3 generate_material_theme.py
+```
+
+This will create a `Material3` folder with dynamic colorsets for each of the material design color tokens. Add them to your XCode project by dragging the entire folder into your `Assets`.
